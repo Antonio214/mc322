@@ -29,8 +29,26 @@ public class LogicController {
         return false;
     }
 
-    public int[] generateMove() {
-        int[] coordenadas = { 0, 1 };
+    public int[] generateMove(String command) {
+        char firLet = command.charAt(0);
+        char firNum = command.charAt(1);
+        char secLet = command.charAt(3);
+        char secNum = command.charAt(4);
+        
+        int[] coordenadas = new int[3];
+        
+        if(firLet == secLet){
+            char midNum = (char)(firNum + 1);
+            coordenadas[0] = Converter.parseStringPos(firNum, firLet);
+            coordenadas[1] = Converter.parseStringPos(midNum, firLet);
+            coordenadas[2] = Converter.parseStringPos(secNum, firLet);
+        }else if(firNum == secNum){
+            char midLet = (char)(firLet +1);
+            coordenadas[0] = Converter.parseStringPos(firNum, firLet);
+            coordenadas[1] = Converter.parseStringPos(firNum, midLet);
+            coordenadas[2] = Converter.parseStringPos(secNum, secLet);
+        }
+
         return coordenadas;
     }
 

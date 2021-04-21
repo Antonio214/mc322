@@ -2,10 +2,10 @@ public class App04 {
     public static void main(String[] args) {
 
         StateManager state = new StateManager(2);
-        state.generateNewState();
-        String[] results = state.getState();
-        System.out.println(results[0]);
-        System.out.println(results[1]);
+        state.generateNewState(1);
+        //String[] results = state.getState();
+        state.printState(0);
+        state.printState(1);
 
     }
 

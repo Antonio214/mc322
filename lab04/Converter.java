@@ -3,10 +3,7 @@ public class Converter {
     /*
      * Recebe uma string no formato f4 Retorna a posição na string Base Ex: f4 -> 29
      */
-    public static int parseStringPos(String stringPos) {
-        char letter = stringPos.charAt(0);
-        char num = stringPos.charAt(1);
-
+    public static int parseStringPos(char num, char letter) {
         int line = turnNumToLine(num);
         int col = turnLetterToCol(letter);
 
