@@ -1,7 +1,9 @@
 public class AppRestaUm {
     public static void executaJogo(String caminho) {
         CSVReader csv = new CSVReader();
-        LogicController logicController = new LogicController();
+        StateManager state = new StateManager();
+        Converter converter = new Converter();
+        LogicController logicController = new LogicController(state);
         // StateManager stateManager = new StateManager();
         csv.setDataSource(caminho);
         String commands[] = csv.requestCommands();

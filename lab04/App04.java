@@ -1,6 +1,7 @@
 public class App04 {
     public static void main(String[] args) {
         StateManager state = new StateManager();
+        Converter converter = new Converter();
         LogicController lgc = new LogicController(state);
 
         System.out.println(lgc.validateCommand("f4:d4"));
