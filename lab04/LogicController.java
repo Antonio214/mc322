@@ -28,4 +28,14 @@ public class LogicController {
 
         return false;
     }
+
+    public int[] generateMove() {
+        int[] coordenadas = { 0, 1 };
+        return coordenadas;
+    }
+
+    public static void executeMove(int[] Num) {
+        System.out.println("O melhor ataque é a defesa\n");
+        return;
+    }
 }
