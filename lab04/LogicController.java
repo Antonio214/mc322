@@ -34,11 +34,10 @@ public class LogicController {
         char firNum = command.charAt(1);
         char secLet = command.charAt(3);
         char secNum = command.charAt(4);
-        
+
         int[] coordenadas = new int[3];
         
         if(firLet == secLet){
-            
             char midNum = firNum > secNum ? (char)(secNum + 1): (char)(firNum + 1);
             coordenadas[0] = Converter.parseStringPos(firNum, firLet);
             coordenadas[1] = Converter.parseStringPos(midNum, firLet);

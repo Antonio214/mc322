@@ -27,8 +27,8 @@ public class StateManager {
 
     }
 
-    public void turnPiece() {
-
+    public void turnPiece(int round, int position) {
+        this.results[round][position] = "P";
     }
 
     public void turnSpace() {
