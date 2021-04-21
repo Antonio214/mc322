@@ -7,8 +7,8 @@ public class AppRestaUm {
         String commands[] = csv.requestCommands();
         
         // Instances
-        LogicController logicController = new LogicController();
-        // StateManager stateManager = new StateManager();
+        StateManager stateManager = new StateManager();
+        LogicController logicController = new LogicController(stateManager);
 
         // Main logic
         for (int i = 0; i < commands.length; i++) {
