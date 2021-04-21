@@ -7,14 +7,14 @@ public class AppRestaUm {
         String commands[] = csv.requestCommands();
         
         // Instances
-        StateManager stateManager = new StateManager();
+        StateManager stateManager = new StateManager(commands.length);
         LogicController logicController = new LogicController(stateManager);
 
         // Main logic
         for (int i = 0; i < commands.length; i++) {
             logicController.validateCommand(commands[i]);
             int Move[] = logicController.generateMove();
-            LogicController.executeMove(Move);
+            LogicController.executeMove(Move, i);
             StateManager.printState();
         }
     }

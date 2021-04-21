@@ -34,7 +34,7 @@ public class LogicController {
         return coordenadas;
     }
 
-    public static void executeMove(int[] Num) {
+    public static void executeMove(int[] Num, int round) {
         System.out.println("O melhor ataque é a defesa\n");
         return;
     }
